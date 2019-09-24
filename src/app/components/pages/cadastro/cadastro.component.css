@@ -1,0 +1,121 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+label {
+    font-family: 'Roboto', sans-serif;
+}
+
+#btn-cadastrar {
+    background: #7626FF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 10px 39px #867FF67A;
+    border-radius: 36px;
+    opacity: 1;
+    height: 36px;
+    font-size: 20px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+#label-make-login{
+    display: inline-block;
+    margin: 10px;
+    margin-top: 27px;
+    cursor: pointer;
+}
+
+a { 
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.container {
+    background-color: #fff;
+    margin: auto;
+}
+
+.form-control.ng-touched.ng-invalid {
+    border: 2px solid red;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+   
+#l-info-p {
+    width: 217px;
+    font-size: 20px;
+}
+
+#l-info-e {
+    width: 78px;
+    font-size: 20px;
+}
+
+.mb-5, .my-5 {
+    margin-bottom: 4.8rem!important;
+}
+
+.mb-4, .my-4 {
+    margin-top: 4rem!important;
+}
+.mt-4, .my-4 {
+    margin-top: 2.5rem!important;
+}
+
+h3 {
+    font-size: 35px;
+    font-family: 'Noto', sans-serif;
+    text-align: start!important;
+}
+#btn-cadastrar {
+    height: 60px;
+}    
+
+} 
+
+@media only screen and (min-width: 1025px) and (max-width: 1600px) {
+
+#btn-cadastrar {
+    height: 55px;
+}    
+
+#l-info-p {
+    width: 217px;
+    font-size: 20px;
+}
+
+#l-info-e {
+    width: 78px;
+    font-size: 20px;
+}
+
+.mb-5, .my-5 {
+    margin-bottom: 4.8rem!important;
+}
+
+.mb-4, .my-4 {
+    margin-top: 4rem!important;
+}
+.mt-4, .my-4 {
+    margin-top: 2.5rem!important;
+}
+
+h3 {
+    font-size: 35px;
+    font-family: 'Noto', sans-serif;
+    text-align: start!important;
+}
+
+}    
+
+@media only screen and (min-width: 1601 px) { .container{display:none}}

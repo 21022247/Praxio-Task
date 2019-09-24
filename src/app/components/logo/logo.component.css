@@ -1,0 +1,57 @@
+header {
+    padding: 5px;
+}
+
+#logo {
+    top: 5px;
+    left: 11px;
+    width: 65px;
+    height: 64px;
+    cursor: pointer;
+}
+
+.container {
+    z-index: 116;
+    background-color: white;
+}
+
+.btn-primary-outline-login { 
+    position: fixed;
+    top: 15px;
+    right: 10px;
+    z-index: 3000;
+    background-color: transparent;
+    border-color: #000;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    color: #000;
+    border: 1px solid #949494;
+    border-radius: 32px;
+}
+
+.btn-primary-outline-login:hover {
+    background-color: #733FFF;
+    color: #fff;
+    border: #733FFF;
+}
+
+.changeColor {
+    background-color: #733FFF;
+    border: #733FFF;
+    color: #fff;
+ }
+
+@media only screen and (min-width: 320px) and (max-width: 480px)
+{   
+    .btn-primary-outline-login{
+        width: 98px;
+        height: 35px;
+    }
+}
+
+@media (min-width: 768px){
+    .container {
+        max-width: 100%;
+    }
+}

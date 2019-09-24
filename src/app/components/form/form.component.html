@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-10 col-md-8 col-lg-10 col-xl-12 offset-md-1 offset-lg-5">
+            <form>
+                <label for="enter-label" id="enter-label">ENTRAR</label>
+                <div class="form-group">
+                    <input 
+                           [(ngModel)]="emailInput"
+                           #e="ngModel"
+                           name="emailInput" 
+                           type="email" 
+                           class="form-control col-md-10 col-lg-6 ng-invalid ng-dirty ng-touched" 
+                           required 
+                           email
+                           id="email-input" 
+                           placeholder="e-mail"
+                           pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"                           
+                     >
+                     <div class="alert alert-danger col-md-10 col-lg-6 mt-2" *ngIf="e.touched && e.errors.pattern">
+                            E-mail inválido.
+                    </div> 
+                </div>
+                <div class="form-group">
+                        <input 
+                        minlength="8" 
+                        pattern="^-?(0|[1-9]\d*)?$" 
+                        [(ngModel)]="senha" 
+                        #pass="ngModel" 
+                        name="senha" 
+                        required 
+                        type="password" 
+                        class="form-control col-lg-6 col-md-10 ng-invalid ng-dirty ng-touched" 
+                        id="password" 
+                        placeholder="Senha">
+                            <div class="alert alert-danger col-md-10 col-lg-6 mt-2" *ngIf="pass.touched && pass.errors.pattern">
+                                A senha deve conter apenas números
+                            </div> 
+                            <div *ngIf="pass.touched && pass.errors.minlength" class="alert alert-warning col-md-10 col-lg-6 mt-2">
+                                A senha deve conter no mínimo 8 caracteres 
+                            </div>
+                        <a href="#" class="d-flex justify-content-end mt-1 col-md-10 col-lg-6"><small id="forgot-password" class="form-text text-primary">Esqueceu a senha?</small></a>
+                    </div>
+                </form>
+            </div>
+            <button routerLink="/" type="button" class="btn btn-primary " id="btn-enter">Entrar</button>
+        </div>
+    <div class="span12 mt-3"><a routerLink="/cadastro" class="ml-2">Crie sua conta</a></div> 
+</div>
+    
