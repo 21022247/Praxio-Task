@@ -12,7 +12,7 @@
                         <div *ngIf="nomeCads.touched && nomeCads.errors.minlength" class="alert alert-warning col-md-10 col-lg-11 mt-2">
                             Nome deve conter no mínimo 2 letra e no máximo 40
                         </div>
-                        <input [(ngModel)]="nomeCad" type="text" class="form-control p-1 mt-2 col-md-11 form-control p-1 mt-3 col-md-6 ng-invalid ng-dirty ng-touched"
+                        <input [(ngModel)]="nomeCad" type="text" class="form-control p-1 mt-2 col-md-11 form-control p-1 mt-3 col-md-6"
                          id="name-input" 
                          placeholder=" Nome/Razão social"
                          minlength="2"
@@ -25,7 +25,7 @@
                         <div class="alert alert-danger col-md-10 col-lg-11 mt-2" *ngIf="cpfCads.touched && cpfCads.errors.pattern">
                           Número inválido. Exemplo: 000-000-000-09/000-000-000-aZ
                        </div> 
-                         <input [(ngModel)]="cpfCad" type="text" class="form-control p-1 mt-3 col-md-6 ng-invalid ng-dirty ng-touched" 
+                         <input [(ngModel)]="cpfCad" type="text" class="form-control p-1 mt-3 col-md-6" 
                          id="cpf-input" 
                          placeholder=" CPF"
                          pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}-[0-9A-Za-z]{2}"
@@ -34,7 +34,7 @@
                          required
                          >
                         <!-- telefone -->
-                         <input [(ngModel)]="telCad" type="text" class="form-control p-1 mt-3 col-md-5 ng-invalid ng-dirty ng-touched" 
+                         <input [(ngModel)]="telCad" type="text" class="form-control p-1 mt-3 col-md-5" 
                          id="tel-input" 
                          placeholder=" Telefone" 
                          pattern="\(?[0-9]{2}\)?[0-9]{5}-?[0-9]{4}" 
@@ -46,7 +46,7 @@
                             Número inválido. Exemplo: (11)12345-1234 / 11123451234 
                          </div> 
                         <!-- email -->
-                         <input [(ngModel)]="emailCad" type="email" class="form-control p-1 mt-3 col-md-11 ng-invalid ng-dirty ng-touched" 
+                         <input [(ngModel)]="emailCad" type="email" class="form-control p-1 mt-3 col-md-11" 
                         id="email-input" 
                         placeholder=" e-mail"
                         #emailCads="ngModel" 
@@ -58,7 +58,7 @@
                             E-mail inválido.
                         </div> 
                         <!-- senha -->
-                        <input [(ngModel)]="senhaCad" type="password" class="form-control p-1 mt-3 col-md-11 ng-invalid ng-dirty ng-touched"
+                        <input [(ngModel)]="senhaCad" type="password" class="form-control p-1 mt-3 col-md-11"
                         id="senha-input"
                         placeholder=" senha"
                         #passCad="ngModel"
@@ -82,7 +82,7 @@
                         <div class="alert alert-danger col-md-10 col-lg-10 mt-2" *ngIf="cepCads.touched && cepCads.errors.pattern">
                             CEP inválido
                         </div>
-                        <input type="text" [(ngModel)]="cepCad" class="form-control p-1 mt-3 col-md-4 ng-invalid ng-dirty ng-touched" 
+                        <input type="text" [(ngModel)]="cepCad" class="form-control p-1 mt-3 col-md-4" 
                         id="cep-input" 
                         placeholder="CEP"
                         pattern="[0-9]{5}-?[0-9]{3}" 
@@ -93,7 +93,7 @@
                         <!-- Logadouro -->
                         <input type="text" class="form-control p-1 mt-3 col-md-6" id="log-input" placeholder="Logadouro"> 
                         <!-- numero -->
-                        <input [(ngModel)]="numberCad" type="text" class="form-control p-1 mt-3 col-md-4 ng-invalid ng-dirty ng-touched" 
+                        <input [(ngModel)]="numberCad" type="text" class="form-control p-1 mt-3 col-md-4" 
                         id="number-input" 
                         placeholder="Número"
                         pattern="^-?(0|[1-9]\d*)?$" 

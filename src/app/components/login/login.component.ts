@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,5 +14,15 @@ export class LoginComponent implements OnInit {
     ngOnInit() {
     this.title.setTitle('Login');
     document.getElementById('btn-login').style.visibility = 'hidden';
+   }
+
+   removeAlert() {
+      setTimeout(() => {
+          $( '.alert' ).delay( 4000 ).fadeOut( 400 );
+      }, 100);
+   }
+
+   alert(pass) {
+     console.log(pass);
    }
 }
