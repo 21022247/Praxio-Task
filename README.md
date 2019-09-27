@@ -8,6 +8,6 @@
 
  $ npm install
  
- #instal jquery 
+ #install jquery 
 
  $ npm install jquery --save

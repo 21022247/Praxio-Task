@@ -9,7 +9,7 @@
                     <label class="ml-2 font-weight-bold mb-3" id="l-info-p">Informações pessoais</label>
                     <div class="form-group">
                         <!-- Razão social -->
-                        <div *ngIf="nomeCads.touched && nomeCads.errors.minlength" class="alert alert-warning col-md-10 col-lg-11 mt-2">
+                        <div *ngIf="nomeCads.touched && nomeCads.errors?.minlength" class="alert alert-warning col-md-10 col-lg-11 mt-2">
                             Nome deve conter no mínimo 2 letra e no máximo 40
                         </div>
                         <input [(ngModel)]="nomeCad" type="text" class="form-control p-1 mt-2 col-md-11 form-control p-1 mt-3 col-md-6"
@@ -20,9 +20,10 @@
                          #nomeCads="ngModel"
                          name="nomeCad" 
                          required
+                         (blur)="removeAlert()"
                          >
                          <!-- CPF -->
-                        <div class="alert alert-danger col-md-10 col-lg-11 mt-2" *ngIf="cpfCads.touched && cpfCads.errors.pattern">
+                        <div class="alert alert-danger col-md-10 col-lg-11 mt-2" *ngIf="cpfCads.touched && cpfCads.errors?.pattern">
                           Número inválido. Exemplo: 000-000-000-09/000-000-000-aZ
                        </div> 
                          <input [(ngModel)]="cpfCad" type="text" class="form-control p-1 mt-3 col-md-6" 
@@ -32,6 +33,7 @@
                          #cpfCads="ngModel"
                          name="cpfCad" 
                          required
+                         (blur)="removeAlert()"
                          >
                         <!-- telefone -->
                          <input [(ngModel)]="telCad" type="text" class="form-control p-1 mt-3 col-md-5" 
@@ -41,8 +43,9 @@
                          #telCads="ngModel" 
                          name="telCad" 
                          required
+                         (blur)="removeAlert()"
                          >
-                         <div class="alert alert-danger col-md-10 col-lg-11 mt-2" *ngIf="telCads.touched && telCads.errors.pattern">
+                         <div class="alert alert-danger col-md-10 col-lg-11 mt-2" *ngIf="telCads.touched && telCads.errors?.pattern">
                             Número inválido. Exemplo: (11)12345-1234 / 11123451234 
                          </div> 
                         <!-- email -->
@@ -53,8 +56,9 @@
                         email
                         name="emailCad"
                         required 
+                        (blur)="removeAlert()"
                         >
-                        <div class="alert alert-danger col-md-5 col-lg-11 mt-2" *ngIf="emailCads.touched && emailCads.errors.email == true">
+                        <div class="alert alert-danger col-md-5 col-lg-11 mt-2" *ngIf="emailCads.touched && emailCads.errors?.email == true">
                             E-mail inválido.
                         </div> 
                         <!-- senha -->
@@ -67,10 +71,10 @@
                         name="senhaCad" 
                         required 
                         >
-                        <div class="alert alert-danger col-md-10 col-lg-11 mt-2" *ngIf="passCad.touched && passCad.errors.pattern">
+                        <div class="alert alert-danger col-md-10 col-lg-11 mt-2" *ngIf="passCad.touched && passCad.errors?.pattern">
                             A senha deve conter apenas números
                         </div> 
-                        <div *ngIf="passCad.touched && passCad.errors.minlength" class="alert alert-warning col-md-10 col-lg-11 mt-2">
+                        <div *ngIf="passCad.touched && passCad.errors?.minlength" class="alert alert-warning col-md-10 col-lg-11 mt-2">
                             A senha deve conter no mínimo 8 caracteres 
                         </div>
                     </div>
@@ -79,7 +83,7 @@
                     <label class="mt-3 ml-2 font-weight-bold" id="l-info-e">Endereço</label>
                     <div class="form-group">
                         <!-- CEP -->
-                        <div class="alert alert-danger col-md-10 col-lg-10 mt-2" *ngIf="cepCads.touched && cepCads.errors.pattern">
+                        <div class="alert alert-danger col-md-10 col-lg-10 mt-2" *ngIf="cepCads.touched && cepCads.errors?.pattern">
                             CEP inválido
                         </div>
                         <input type="text" [(ngModel)]="cepCad" class="form-control p-1 mt-3 col-md-4" 
@@ -102,7 +106,7 @@
                         required>
                         <!-- bairro -->
                         <input type="text" class="form-control p-1 mt-3 col-md-6" id="bairro-input" placeholder="Bairro">
-                        <div class="alert alert-danger col-md-10 col-lg-10 mt-2" *ngIf="numberCads.touched && numberCads.errors.pattern">
+                        <div class="alert alert-danger col-md-10 col-lg-10 mt-2" *ngIf="numberCads.touched && numberCads.errors?.pattern">
                             Digite apenas números
                         </div> 
                     </div>

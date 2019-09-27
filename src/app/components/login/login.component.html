@@ -27,7 +27,6 @@
                         pattern="^-?(0|[1-9]\d*)?$" 
                         #pass="ngModel" 
                         name="senha" 
-                        (change)="alert(pass)"
                         >
                         <div *ngIf="pass.touched && pass.errors?.minlength" class="alert alert-warning col-md-10 col-lg-6 mt-2">
                             A senha deve conter no mínimo 8 caracteres 

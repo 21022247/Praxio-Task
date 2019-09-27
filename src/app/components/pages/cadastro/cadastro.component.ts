@@ -17,4 +17,10 @@ export class CadastroComponent implements OnInit {
     document.getElementById('btn-login').style.visibility = 'hidden';
   }
 
+  removeAlert() {
+    setTimeout(() => {
+        $( '.alert' ).delay( 4000 ).fadeOut( 400 );
+    }, 100);
+ }
+
 }

@@ -22,7 +22,4 @@ export class LoginComponent implements OnInit {
       }, 100);
    }
 
-   alert(pass) {
-     console.log(pass);
-   }
 }
