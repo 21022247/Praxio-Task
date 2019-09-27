@@ -1,20 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
-
 @Component({
-  selector: 'app-cadastro',
-  templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css'],
 })
-export class CadastroComponent implements OnInit {
 
+export class LoginComponent implements OnInit {
   constructor(private title: Title) { }
 
-  ngOnInit() {
-    this.title.setTitle('Cadastro');
-
+    ngOnInit() {
+    this.title.setTitle('Login');
     document.getElementById('btn-login').style.visibility = 'hidden';
-  }
-
+   }
 }

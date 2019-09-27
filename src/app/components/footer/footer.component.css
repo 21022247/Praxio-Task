@@ -1,0 +1,45 @@
+.footer {
+    height: 300px;
+}
+
+ul {
+    list-style: none;    
+    margin-top: 5px;       
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li {
+    padding: 0.5em;
+}
+
+li > a {
+    padding: 10px;
+    font-family: MONOSPACE;
+    letter-spacing: 1px;
+    color: green;
+}
+
+li > a:hover {
+    color: #733FFF;
+}
+
+li a.active {
+ color: #733FFF;
+}
+
+li a.active:hover {
+    color: #888;
+}
+
+.footer {
+    height: 204px;
+}
+
+#footer-img {
+    width: 200px;
+
+}

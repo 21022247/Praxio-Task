@@ -13,11 +13,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.title.setTitle('Home');
-
-
     document.getElementById('see-more').addEventListener('click', () => {
       $('body,html').animate({ scrollTop: $('body').height() }, 300);
-    });
+     });
+
+    document.getElementById('btn-login').style.visibility = 'visible';
    }
 
    externalLink() {

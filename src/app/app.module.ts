@@ -7,10 +7,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { BgimageComponent } from './components/bgimage/bgimage.component';
-import { FormComponent } from './components/form/form.component';
+import { LoginComponent } from './components/login/login.component';
 import { CadastroComponent } from './components/pages/cadastro/cadastro.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -19,9 +20,10 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     LogoComponent,
     BgimageComponent,
-    FormComponent,
+    LoginComponent,
     CadastroComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
