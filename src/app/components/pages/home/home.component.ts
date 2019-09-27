@@ -18,15 +18,9 @@ export class HomeComponent implements OnInit {
     document.getElementById('see-more').addEventListener('click', () => {
       $('body,html').animate({ scrollTop: $('body').height() }, 300);
     });
+   }
 
-    //   $(window).scroll(function() {
-  //     if ($(this).scrollTop() > 50) {
-  //        $('.btn-primary-outline-login').addClass('changeColor');
-  //     }
-  //     if ($(this).scrollTop() < 50) {
-  //        $('.btn-primary-outline-login').removeClass('changeColor');
-  //     }
-  //  });
-
+   externalLink() {
+      window.open('http://praxio.com.br/', '_blank');
    }
 }

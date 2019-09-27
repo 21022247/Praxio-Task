@@ -8,7 +8,7 @@ const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'cadastro', component: CadastroComponent },
   {path: 'login', component: FormComponent, runGuardsAndResolvers: 'always' },
-  { path: '**', redirectTo: 'home' },
+  { path: '**', redirectTo: '' },
 
 ];
 
