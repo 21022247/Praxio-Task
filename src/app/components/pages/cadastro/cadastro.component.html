@@ -93,9 +93,10 @@
                         #cepCads="ngModel" 
                         name="cepCad" 
                         required
+                        (change)="getCep(!cepCads.errors?.pattern, cepCads.value)" 
                         >
                         <!-- Logadouro -->
-                        <input type="text" class="form-control p-1 mt-3 col-md-6" id="log-input" placeholder="Logadouro"> 
+                        <input ng-model="logadouro" type="text" class="form-control p-1 mt-3 col-md-6" id="log-input" placeholder="Logadouro"> 
                         <!-- numero -->
                         <input [(ngModel)]="numberCad" type="text" class="form-control p-1 mt-3 col-md-4" 
                         id="number-input" 
